@@ -1,0 +1,56 @@
+html,
+body {
+    background: #000;
+}
+* {
+    margin: 0;
+}
+.slider {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+    border-radius: 5%;
+}
+.slider-line {
+    position: relative;
+    display: flex;
+}
+.slider img {
+    max-width: 500px;
+    width: 100%;
+}
+.prev-button,
+.next-button {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem; /* Убираем лишние пробелы */
+    color: grey;
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Убираем рамки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.slider:hover .prev-button,
+.slider:hover .next-button {
+    opacity: 1;
+}
+.prev-button {
+    left: 14px;
+}
+
+.next-button {
+    right: 14px;
+}
